@@ -1,3 +1,4 @@
+#method 1
 class Solution:
     def replaceSpace(self, s: str) -> str:
         s = list(s)                      #先把s转换为列表
@@ -5,3 +6,8 @@ class Solution:
             if s[i]==" ":
                 s[i]="%20"               #全部替换
         return "".join(s)                #输出合并后的字符串
+    
+   #method 2
+class Solution:
+    def replaceSpace(self, s: str) -> str:
+        return s.replace(" ","%20")    #替换函数
