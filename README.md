@@ -86,3 +86,8 @@ return dic[head]
 list = [1,2,3,4,5,6]
 
 list[3::-1] #[4,3,2,1]
+
+# 11.  .isupper() 括号很重要，不要漏！！！！！
+.islower()
+word[1:].islower() 判断第二个到最后一个字符是否是小写
+all(word[i].islower() == word[0].islower() for i in range(1, len(word)) ) 判断是否所有的字符都和第一个字符大小写相同。
