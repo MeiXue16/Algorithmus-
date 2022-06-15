@@ -52,6 +52,7 @@ return 0
 # 7.str.join(sequence)
 例如：
 s= ("we", "a", "e")
+
 “-”.join(s) #we-a-e
 
 "".join(s) #weae
