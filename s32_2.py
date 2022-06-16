@@ -7,7 +7,7 @@
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        #DFS
+        #BFS Breadth-First Search,宽度优先搜索
         if not root: return []
         res, que =[], collections.deque()
         que.append(root)
