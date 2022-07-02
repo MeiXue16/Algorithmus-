@@ -10,7 +10,7 @@ class Solution:
         def recur(A,B):
             if not B: return True
             if (not A) or (A.val != B.val): return False
-            return recur(A.left, B.left) and recur(A.right, B.right)
+            return recur(A.left, B.left) and recur(A.right, B.right)  //rekursion递归要注意终止条件
         return bool(A and B) and (recur(A,B) or self.isSubStructure(A.left,B) or self.isSubStructure(A.right,B))
     
     
