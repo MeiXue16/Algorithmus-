@@ -25,3 +25,23 @@ class Solution:
 
         visited = set()
         return dfs(0, 0, 0, 0)
+    
+#method 3: BFS
+class Solution:
+    def movingCount(self, m: int, n: int, k: int) -> int:
+        def sum(x):
+            sumx =0
+            while x!= 0:
+                sumx += x%10
+                x = x//10
+            return sumx
+        que =[(0,0,0,0)]
+        visited = set()
+        while que:
+            i, j, si, sj =que.pop(0)
+            if i>=m or j>= n or si+sj >k or (i,j) in visited:
+                continue
+            visited.add((i,j))
+            que.append((i+1, j, sum(i+1), sj))
+            que.append((i, j+1, si, sum(j+1)))
+        return len(visited)
