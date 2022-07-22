@@ -7,7 +7,7 @@ class Solution:
                 x = x//10
             return sumx
         def dfs(i, j, si, sj):
-            if i >= m or j >= n or si+sj >k or (i,j) in visited:
+            if i >= m or j >= n or si+sj >k or (i,j) in visited: #ende
                 return 0
             visited.add((i,j))
             return 1 + dfs(i+1, j, sum(i+1), sj)+ dfs(i, j+1, si, sum(j+1))
@@ -15,7 +15,7 @@ class Solution:
         return dfs(0,0,0,0)
     
 
-#method 2: setze m,n in (0,100)
+#method 2: setze m,n in (0,100) i= 32 j= 35,k=12, 3+2+3+5 =13>12
 class Solution:
     def movingCount(self, m: int, n: int, k: int) -> int:
         def dfs(i, j, si, sj):
