@@ -35,6 +35,7 @@ class Card(object):
 
 class Poker(object):
     """一副牌"""
+#也可以用枚举，enum
 
     def __init__(self):
         self._cards = [Card(suite, face)
@@ -108,3 +109,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
